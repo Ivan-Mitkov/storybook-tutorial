@@ -7,7 +7,7 @@ import "./index.css";
 function App() {
   return (
     <Provider store={store}>
-      <InboxScreen />
+      <InboxScreen data-testid='inboxscreen'/>
     </Provider>
   );
 }
