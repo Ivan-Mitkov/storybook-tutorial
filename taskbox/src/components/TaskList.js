@@ -65,9 +65,9 @@ PureTaskList.propTypes = {
   /** The list of tasks */
   tasks: PropTypes.arrayOf(Task.propTypes.task).isRequired,
   /** Event to change the task to pinned */
-  onPinTask: PropTypes.func.isRequired,
+  onPinTask: PropTypes.func,
   /** Event to change the task to archived */
-  onArchiveTask: PropTypes.func.isRequired,
+  onArchiveTask: PropTypes.func,
 };
 
 PureTaskList.defaultProps = {
