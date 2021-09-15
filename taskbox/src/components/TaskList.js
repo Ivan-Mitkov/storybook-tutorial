@@ -5,7 +5,9 @@ import Task from "./Task";
 
 import { connect } from "react-redux";
 import { archiveTask, pinTask } from "../lib/redux";
+//the TaskList component is a container that renders the PureTaskList presentational component. By definition container components cannot be simply rendered in isolation; they expect to be passed some context or to connect to a service. What this means is that to render a container in Storybook, we must mock (i.e. provide a pretend version) the context or service it requires.
 
+// When placing the TaskList into Storybook, we were able to dodge this issue by simply rendering the PureTaskList and avoiding the container. We'll do something similar and render the PureInboxScreen in Storybook also.
 export function PureTaskList({ loading, tasks, onPinTask, onArchiveTask }) {
   /* previous implementation of TaskList */
   const events = {
